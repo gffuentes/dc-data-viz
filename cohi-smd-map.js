@@ -11,7 +11,7 @@ var path = d3.geoPath()
   .projection(projection);
 
 var dc = 0;
-var url = "https://opendata.dc.gov/datasets/890415458c4c40c3ada2a3c48e3d9e59_21.geojson";
+var url = "Single_Member_District_from_2013.geojson";
 
 d3.json(url, function(err, dc) {
   var cohi_feature_array = _.filter(dc.features,function(f) { return _.includes(f.properties.ANC_ID, "1") });
